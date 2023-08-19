@@ -1,13 +1,303 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0px;
+  padding: 0px;
+ 
+/* font-family: 'Roboto Slab', serif; */
+}
+.navbrand{
+  padding: 0px!important;
+}
+.navbar{
+  padding: 0px!important;
+}
+.nav-link{
+  font-size: 17px!important;
+  font-weight: 500!important;
+  color: black!important;
+}
+/* .nav-link a{
+  margin: 0px 15px!important;
+} */
+.button{
+  background-color: #e21f36!important;
+}
+.home-container{
+  margin-top: 70px;
+  background:#082862;
+  max-height:500px;
+  display: block;
+  align-items: center;
+}
+@media screen and (max-width:767px) {
+  .home-container{
+    background:#082862;
+    max-height:1000px;
+    display: block;
+    align-items: center;
+  }
+}
+.content-part{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: flex-start;
+   
+}
+ h5{
+color: #e21f36!important;
+font-size: 1.25rem!important;
+}
+.content-part h1{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700!important;
+  margin: 10px 0px;
+}
+.content-part p{
+  color: #fff;
+  font-size: 16px;
+}
+.img-section img{
+  max-width: 100%;
+  height: 500px;
+}
+.btn-danger{
+  border-radius: 0px!important;
+  font-weight: 600!important;
+  font-size:16px;
+  color: #fff!important;
+  padding: 10px 20px!important;
+}
+.about-left img{
+  max-width: 100%;
+}
+.four-card{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(assets/challenges-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    z-index: 9;
+   padding: 70px 0px;
+   background-attachment: fixed;
+   text-align: center;
+}
+.card-top{
+  border: 0px!important;
+
+}
+.card-top img{
+  height: 250px!important;
+}
+.card-title{
+  font-size: 19px!important;
+}
+/* .four-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000219;
+  opacity: 0.75;
+} */
+
+.counter-row{
+  padding: 50px 0px;
+}
+.counter-box{
+  border: 1px solid rgb(60, 58, 58);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+}
+.counter-box:hover{
+  transition: 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+.counter-icon{
+  background-color: rgb(240, 233, 233) !important;;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.counter{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.chalanges h3{
+  color: #fff;
+}
+.chalanges h2{
+  color: #fff;
+}
+.card-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons{
+  margin-top: 10px;
+  font-size: 50px;
+    color: #e21f36;
+    line-height: 1;
+    display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.services{
+  padding: 50px 0px;
+  background-color: aliceblue
+}
+.service-card{
+  text-align: center;
+  font-size: 19px!important;
+}
+
+.why-chooseus{
+  background: 
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+   url(assets/counter-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+}
+.footer{
+   background-color: #082862;
+}
+.import-link{
+  position: relative;
+}
+
+ .footer p a{
+  text-decoration: none!important;
+ }
+.read-more{
+  color: bisque;
+  cursor: pointer;
+}
+.card-solution{
+  border: 0px!important;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  /* border-radius: 0px!important; */
+  position: relative;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.card-solution::after,.counter-box::after,.card-solution::before,.counter-box::before{
+  position: absolute;
+  content: '';
+  border-style: solid;
+  border-color: red;
+  transition: 0.5s;
+}
+.card-solution::before,.counter-box::before{
+  height: 0;
+  width: 100%;
+  border-width: 0 2px;
+  top: 50%;
+  transform: translate(0px,-50%);
+  border-radius: 5px;
+}
+.card-solution::after,.counter-box::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0px);
+  border-width: 1px 0;
+  border-radius: 5px;
+}
+
+.card-solution:hover{
+  transform: scale(1.03);
+box-shadow: 0 10px 10px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.card-solution:hover::before,.counter-box:hover::before{
+  height: 100%;
+}
+.card-solution:hover::after,.counter-box:hover::after{
+  width: 100%;
+}
+.card-solution-body{
+  padding: 30px!important;
+}
+.card-title-solution{
+  color: #000!important;
+  font-size: 18px!important;
+}
+.solution-img{
+  background-image: url(assets/solution-img.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 670px;
+  width: 100%;
+}
+/* 
+about us page css */
+
+.about-page{
+  margin-top: 70px;
+  background: #000219;
+ padding: 100px 0px;
+}
+.about{
+  margin: 60px 0px;
+}
+.about-text{
+  color: red;
+}
+.about-home{
+  color: #fff!important;
+  text-decoration: none;
+}
+.about-home:hover{
+  color: #e21f36!important;
+  transition: 0.5s;
+}
+
+/* contact us page css */
+
+
+
+.contact-us{
+  margin-top: 70px;
+  background-color: #000219;
+  padding: 100px 0px;
+}
+.form-section{
+  margin: 50px 0px;
+}
+.form-control{
+  border-radius: 0px!important;
+}
+.contact-address{
+  display: flex;
+  flex-direction: column;
+}
+.contact-address-icon{
+  font-size: 30px;
+  color: #e21f36;
+  margin-bottom: 10px;
+}
+/* 
+service page css */
+
+.services-section{
+  margin-top: 70px;
+  background-color: #000219;
+  padding: 100px 0px;
 }
