@@ -71,7 +71,7 @@ const Home = () => {
       <h2>You Can Protect Your Organization’s </h2>
        <h2>Cybersecurity By Us</h2>
        <div className='row my-5 '>
-           <div className='col-lg-3 col-md-3 col-12'>
+           <div className='col-lg-3 col-md-3 col-12 my-2'>
            <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -92,7 +92,7 @@ const Home = () => {
            </div>
         
          
-           <div className='col-lg-3 col-md-3 col-12'>
+           <div className='col-lg-3 col-md-3 col-12 my-2'>
            <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -111,7 +111,7 @@ const Home = () => {
   </div>
            </div>
            </div>
-           <div className='col-lg-3 col-md-3 col-12'>
+           <div className='col-lg-3 col-md-3 col-12 my-2'>
            <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -130,7 +130,7 @@ const Home = () => {
   </div>
            </div>
            </div>
-           <div className='col-lg-3 col-md-3 col-12'>
+           <div className='col-lg-3 col-md-3 col-12 my-2'>
            <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">

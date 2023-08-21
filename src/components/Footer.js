@@ -18,18 +18,18 @@ const Footer = () => {
       <span>Get connected with us on social networks:</span>
     </div>
   
-    <div className='social-media'>
-      <a href="" className="me-4 text-reset">
-        <BiLogoFacebook className='facbook'/>
+    <div className='social-media '>
+      <a href="" className="me-4 text-reset fb">
+        <BiLogoFacebook className='facbook_icon'/>
       </a>
-      <a href="" className="me-4 text-reset">
+      <a href="" className="me-4 text-reset twitter">
         <AiOutlineTwitter />
       </a>
     
-      <a href="" className="me-4 text-reset">
+      <a href="" className="me-4 text-reset instagram">
         <BiLogoInstagram />
       </a>
-      <a href="" className="me-4 text-reset">
+      <a href="" className="me-4 text-reset linkdin">
         <BiLogoLinkedin />
       </a>
      
@@ -82,32 +82,32 @@ const Footer = () => {
           </h6>
           <hr />
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Red teaming</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Red teaming</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Blue teaming</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Blue teaming</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Penetration testing
-</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Penetration testing
+</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Vulnerability assesment</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Vulnerability assesment</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> White box testing</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> White box testing</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Gray box testing</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Gray box testing</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Security code review</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Security code review</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Soc</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Soc</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Noc</a>
+            <NavLink to="/services" className="text-reset"><BiRightArrowAlt /> Noc</NavLink>
           </p>
         </div>
       
@@ -132,11 +132,11 @@ const Footer = () => {
     </div>
   </section>
 
-  <div className="text-center p-4" 
+  <div className="p-4 px-5" 
   style={{backgroundColor:'#061430'}}
   >
-    © 2021 Copyright:
-    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  Copyright 2022 - Shuk Global Private Limited - India” Website Designed by :
+    <a className="text-reset fw-bold" href="https://www.shukglobal.com/">Shuk Global</a>
   </div>
  
 </footer>
