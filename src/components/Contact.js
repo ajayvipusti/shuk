@@ -3,15 +3,24 @@ import { NavLink } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {FaLocationDot} from 'react-icons/fa6'
 import {AiOutlineMail,AiTwotonePhone} from 'react-icons/ai'
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const [value,setValue] =useState({
-    userName:'',
-    email:'',
-    number:'',
-    service:'',
-    message:''
-  })
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_iiynd8f', 'template_48oml2g', form.current, '48btyDIvZy3eDyRyN')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
   <>
    <section className='contact-us text-center text-white'>
@@ -24,21 +33,21 @@ const Contact = () => {
     <div className='row p-4' style={{ boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
       <div className='col-lg-7 col-md-7 col-12 p-4' >
       <h2 className='mb-2'>Write Us</h2>
-      <form>
+      <form ref={form} onSubmit={sendEmail}>
   <div className="row mb-4">
     <div className="col">
-      <input type="text"  className="form-control" placeholder=" Name" />
+      <input type="text"  className="form-control" placeholder=" Name" name="from_name"/>
     </div>
     <div className="col">
-      <input type="email" className="form-control" placeholder="Email" />
+      <input type="email" className="form-control" placeholder="Email" name="from_email"/>
     </div>
   </div>
   <div className="row mb-4">
     <div className="col">
-      <input type="number" className="form-control" placeholder="Number" />
+      <input type="number" className="form-control" placeholder="Number" name='from_number' />
     </div>
     <div className="col">
-      <input type="text" className="form-control" placeholder="Services" />
+      <input type="text" className="form-control" placeholder="Services" name='message'/>
     </div>
   </div>
   <div class="form-group mb-4">
