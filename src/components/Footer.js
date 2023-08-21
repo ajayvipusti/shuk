@@ -2,6 +2,7 @@ import React from 'react'
 import {BiLogoFacebook,BiLogoLinkedin ,BiLogoInstagram,BiRightArrowAlt} from 'react-icons/bi'
 import {AiOutlineTwitter,AiOutlineMail,AiOutlinePhone} from 'react-icons/ai'
 import {ImLocation} from 'react-icons/im'
+import { NavLink } from 'react-router-dom'
 
 
 const Footer = () => {
@@ -17,9 +18,9 @@ const Footer = () => {
       <span>Get connected with us on social networks:</span>
     </div>
   
-    <div>
+    <div className='social-media'>
       <a href="" className="me-4 text-reset">
-        <BiLogoFacebook />
+        <BiLogoFacebook className='facbook'/>
       </a>
       <a href="" className="me-4 text-reset">
         <AiOutlineTwitter />
@@ -37,7 +38,7 @@ const Footer = () => {
   </section>
 
   <section className="">
-    <div className="container text-center text-md-start mt-5">
+    <div className="container  text-center text-md-start mt-5">
  
       <div className="row mt-3">
    
@@ -50,31 +51,31 @@ const Footer = () => {
           <p>
           Organizations face damage to brand reputation, revenue loss, 
           loss of intellectual property, etc.​ Government organizations can face loss of critical data which can result in a national security threat.​Deception is a layer of security that helps the organization to protect itself from imminent threats. Our first priority is protecting our client’s
-           assets for which they put their trust in us. <span className='read-more'>Read More...</span>
+           assets for which they put their trust in us. <span className='read-more'><NavLink to='/about'>Read More...</NavLink></span>
           </p>
         </div>
     
-        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-section">
         
           <h6 className="text-uppercase fw-bold mb-3">
           Our Menu
           </h6>
           <hr />
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Angular</a>
+            <NavLink to="/" className="text-reset"><BiRightArrowAlt /> Home</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> React</a>
+            <NavLink to="/about" className="text-reset"><BiRightArrowAlt /> About Us</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Vue</a>
+            <NavLink to="services" className="text-reset"><BiRightArrowAlt /> Our Services</NavLink>
           </p>
           <p>
-            <a href="#!" className="text-reset"><BiRightArrowAlt /> Laravel</a>
+            <NavLink to="contact" className="text-reset"><BiRightArrowAlt /> Contact Us</NavLink>
           </p>
         </div>
       
-        <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4" >
+        <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 footer-section" >
          
           <h6 className="text-uppercase fw-bold mb-3">
           Our Services
@@ -110,7 +111,7 @@ const Footer = () => {
           </p>
         </div>
       
-        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer-section">
        
           <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
           <hr />
@@ -119,7 +120,7 @@ const Footer = () => {
            Industrial Area, Sector 62, Noida, Uttar Pradesh</span></p>
        
           <p>
-            <AiOutlineMail /> info@shukglobal.com
+           <a href = "mailto: info@shukglobal.com" className='text-white'><AiOutlineMail /> info@shukglobal.com</a> 
           </p>
         
           <p><AiOutlinePhone />  + 01 234 567 88</p>

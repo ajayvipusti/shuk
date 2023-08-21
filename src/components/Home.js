@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import img1 from '../assets/home2-banner-main.png'
 import img2 from '../assets/approach-img-4.jpg'
 import Card from 'react-bootstrap/Card';
-import {LiaClock} from 'react-icons/lia'
 import card1 from '../assets/s1.jpg'
 import card2 from '../assets/s2.jpg'
 import card3 from '../assets/s3.jpg'
@@ -17,24 +16,27 @@ import {GrShieldSecurity} from 'react-icons/gr'
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import {MdOutlineSecurity} from 'react-icons/md'
-import {AiOutlineCloudServer} from 'react-icons/ai'
+import {AiOutlineCloudServer,AiOutlineFileProtect} from 'react-icons/ai'
 import {GiCyberEye} from 'react-icons/gi'
 import {HiIdentification} from 'react-icons/hi'
+import {GrOrganization,GrTechnology} from 'react-icons/gr'
+import {MdOutlineWebStories} from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 
 
 const Home = () => {
   const [counterOn,setCounterOn]=useState(false)
   return (
     <>
-    <section className='home-container '>
+    <section className='home-container mx-2'>
     <div className='container'>
      <div className='row pt-4 pb-3'>
        <div className='col-lg-7 col-md-7 col-12 content-part'>
          <h5>Shuk Global Pvt Ltd</h5>
-         <h1>Best In Class Cyber Security Services</h1>
+         <h1 className=''>Best In Class Cyber Security Services</h1>
          <p>With our innovative cyber security solutions, your IT/OT network would be protected. In case of any incident, our response would be
           the first and effective to protect your systems.</p>
-          <button className='btn btn-danger'>Contact Us</button>
+          <NavLink to='/contact'  className='btn btn-danger'>Contact Us</NavLink>
        </div>
        <div className='col-lg-5 col-md-5 col-12 img-section text-center'>
        <img src={img1}  alt='' />
@@ -70,40 +72,81 @@ const Home = () => {
        <h2>Cybersecurity By Us</h2>
        <div className='row my-5 '>
            <div className='col-lg-3 col-md-3 col-12'>
-           <Card className='card-icon'>
-           <HiIdentification className='icons'/>
-      {/* <Card.Img variant="top" src=""  /> */}
-      <Card.Body>
+           <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div className='card-icon'>
+           <MdOutlineWebStories className='icons'/>
+     </div>
+     <Card.Body>
         <Card.Title className='card-title'>Identifying Threats </Card.Title>
-      </Card.Body>
-    </Card>
+      </Card.Body>      
+    </div>
+    <div class="flip-card-back">
+     
+
+      <p>Vigilance is the sentinel of security – identifying threats before they cast their shadow</p>
+    </div>
+  </div>
            </div>
-           <div className='col-lg-3 col-md-3 col-12'>
-           <Card className='card-icon'>
-           <GiCyberEye className='icons'/>
-      {/* <Card.Img variant="top" src=""  /> */}
-      <Card.Body>
-        <Card.Title className='card-title'>Cyber Risk Assessment </Card.Title>
-      </Card.Body>
-    </Card>
            </div>
+        
+         
            <div className='col-lg-3 col-md-3 col-12'>
-           <Card className='card-icon'>
+           <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div className='card-icon'>
            <MdOutlineSecurity className='icons'/>
-      {/* <Card.Img variant="top" src=""  /> */}
-      <Card.Body>
-        <Card.Title className='card-title'>Cyber Security Consulting </Card.Title>
-      </Card.Body>
-    </Card>
+     </div>
+     <Card.Body>
+        <Card.Title className='card-title'> Cyber Risk Assessment </Card.Title>
+      </Card.Body>      
+    </div>
+    <div class="flip-card-back">
+    
+      <p>Cyber risk management: safeguarding today's virtual 
+      frontiers to secure tomorrow's digital possibilities</p>
+    </div>
+  </div>
+           </div>
            </div>
            <div className='col-lg-3 col-md-3 col-12'>
-           <Card className='card-icon'>
+           <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div className='card-icon'>
+           <GiCyberEye className='icons'/>
+     </div>
+     <Card.Body>
+        <Card.Title className='card-title'>Cyber Security Consulting </Card.Title>
+      </Card.Body>      
+    </div>
+    <div class="flip-card-back">
+
+      <p>Cybersecurity is not just about controlling data; it's
+       about safeguarding the future of digital trust</p>
+    </div>
+  </div>
+           </div>
+           </div>
+           <div className='col-lg-3 col-md-3 col-12'>
+           <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div className='card-icon'>
            <AiOutlineCloudServer className='icons'/>
-      {/* <Card.Img variant="top" src=""  /> */}
-      <Card.Body>
+     </div>
+     <Card.Body>
         <Card.Title className='card-title'>Managing Cloud Security </Card.Title>
-      </Card.Body>
-    </Card>
+      </Card.Body>      
+    </div>
+    <div class="flip-card-back">
+
+      <p>Securing the cloud: where innovation meets vigilance</p>
+    </div>
+  </div>
+           </div>
            </div>
        </div>
        </div>
@@ -214,21 +257,21 @@ const Home = () => {
 	</div>
 	<div className=" col-lg-3 col-md-3 col-12">
 		<div className="counter-box">
-    <GrShieldSecurity className='counter-icon'/>
+    <GrOrganization className='counter-icon'/>
     {counterOn && <CountUp start={0} end={1000} delay={0.9} className='counter'/> }
 			<p style={{fontSize:'20px'}}>Trusted Organizations</p>
 		</div>
 	</div>
 	<div className=" col-lg-3 col-md-3 col-12">
 		<div className="counter-box">
-    <GrShieldSecurity className='counter-icon'/>
+    <AiOutlineFileProtect className='counter-icon'/>
     {counterOn && <CountUp start={0} end={567} delay={0.9} className='counter'/> }
 			<p style={{fontSize:'20px'}}>Website Protection</p>
 		</div>
 	</div>
 	<div className=" col-lg-3  col-md-3 col-12">
 		<div className="counter-box">
-    <GrShieldSecurity className='counter-icon'/>
+    <GrTechnology className='counter-icon'/>
     {counterOn && <CountUp start={0} end={100} delay={0.9} className='counter'/> }
 			<p style={{fontSize:'20px'}}>Innovative Technology</p>
 		</div>

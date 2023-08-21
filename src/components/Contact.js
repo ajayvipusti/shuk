@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {FaLocationDot} from 'react-icons/fa6'
 import {AiOutlineMail,AiTwotonePhone} from 'react-icons/ai'
 
 const Contact = () => {
+  const [value,setValue] =useState({
+    userName:'',
+    email:'',
+    number:'',
+    service:'',
+    message:''
+  })
   return (
   <>
    <section className='contact-us text-center text-white'>
@@ -20,7 +27,7 @@ const Contact = () => {
       <form>
   <div className="row mb-4">
     <div className="col">
-      <input type="text" className="form-control" placeholder=" Name" />
+      <input type="text"  className="form-control" placeholder=" Name" />
     </div>
     <div className="col">
       <input type="email" className="form-control" placeholder="Email" />
@@ -72,6 +79,9 @@ const Contact = () => {
        </div>
       </div>
     </div>
+   </section>
+   <section>
+   
    </section>
   </>
   )
