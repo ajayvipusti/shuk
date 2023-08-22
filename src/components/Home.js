@@ -50,7 +50,7 @@ const Home = () => {
       <div className='col-lg-6 col-md-6 col-12 about-left'>
         <img src={img2} alt='' />
       </div>
-      <div className='col-lg-6 col-md-6 col-12 my-3'>
+      <div className='col-lg-6 col-md-6 col-12 '>
        <h5>About Us</h5>
        <h3>Welcome To Shuk Global Pvt Ltd</h3>
        <p>We are a Cyber Security startup incubated at FIRST, IIT Kanpur under the IHub programme with a focus on Defensive Security. We have expertise in developing solutions like Deception Technology, Custom Honeypot Development, Network Intrusion Detection Systems, Host-Based Intrusion Detection Systems, Insider Threat Detection

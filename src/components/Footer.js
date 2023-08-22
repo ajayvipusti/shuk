@@ -3,9 +3,22 @@ import {BiLogoFacebook,BiLogoLinkedin ,BiLogoInstagram,BiRightArrowAlt} from 're
 import {AiOutlineTwitter,AiOutlineMail,AiOutlinePhone} from 'react-icons/ai'
 import {ImLocation} from 'react-icons/im'
 import { NavLink } from 'react-router-dom'
+// import GoogleMapReact from 'google-map-react';
+// import Map from './Map'
 
 
 const Footer = () => {
+
+  // const defaultProps = {
+  //   center: {
+  //     lat: 10.99835602,
+  //     lng: 77.01502627
+  //   },
+  //   zoom: 11
+  // };
+
+
+
   return (
     <>
    
@@ -138,6 +151,20 @@ const Footer = () => {
   Copyright 2022 - Shuk Global Private Limited - India” Website Designed by :
     <a className="text-reset fw-bold" href="https://www.shukglobal.com/">Shuk Global</a>
   </div>
+
+  {/* <div style={{ height: '100vh', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <Map
+          lat={59.955413}
+          lng={30.337844}
+          text="My Marker"
+        />
+      </GoogleMapReact>
+    </div> */}
  
 </footer>
 

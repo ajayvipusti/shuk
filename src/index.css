@@ -14,10 +14,18 @@
 @media screen and (max-width:767px) {
   .navbar .active{
     color: red!important;
-    border-bottom: 2px solid red;
+    border-bottom: none!important;
    width: 100px;
   }
 }
+
+@media screen and (max-width:992px) {
+  .navbar .active{
+    border-bottom: none!important;
+  }
+}
+
+
  .nav-link:hover{
   color: red!important;
 }
@@ -35,13 +43,20 @@
 .button{
   background-color: #e21f36!important;
 }
-/* @media screen and (max-width:767px) {
+
+@media screen and (max-width:767px) {
   .button{
     background-color: #e21f36!important;
+    width: 140px;
     margin-top: 10px;
   }
-} */
+}
 
+@media screen and (max-width:992px) {
+  .button{
+    width: 150px!important;
+  }
+}
 .button:hover{
   color: white!important;
 }
@@ -116,6 +131,11 @@ font-size: 1.25rem!important;
 }
 .about-left img{
   max-width: 100%;
+}
+@media screen and (max-width:992px) {
+  .about-left img{
+    height: 590px;
+  }
 }
 .four-card{
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(assets/challenges-bg.jpg);

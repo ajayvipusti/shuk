@@ -7,9 +7,18 @@ import  { useRef } from 'react';
 import emailjs from '@emailjs/browser'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleMapReact from 'google-map-react';
+import Map from './Map'
 
 
 const Contact = () => {
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627
+    },
+    zoom: 11
+  };
 
   const notify = () => toast.success("form submitted successfully !");
   const form = useRef();
@@ -98,6 +107,19 @@ const Contact = () => {
    
    </section>
    <ToastContainer />
+   <div style={{ height: '450px', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <Map
+          lat={59.955413}
+          lng={30.337844}
+          text="My Marker"
+        />
+      </GoogleMapReact>
+    </div>
   </>
   )
 }
