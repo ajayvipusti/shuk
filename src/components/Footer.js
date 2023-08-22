@@ -128,15 +128,17 @@ const Footer = () => {
        
           <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
           <hr />
-         
-          <p className=''><ImLocation /> <span> 206 , Tower B, ITHUM TOWER, GALAXY BUSINESS PARK, Block A,
+         {/* <Locationmap >
+          
+       </Locationmap> */}
+       <p className='cursor-pointer'><ImLocation /> <span> 206 , Tower B, ITHUM TOWER, GALAXY BUSINESS PARK, Block A,
            Industrial Area, Sector 62, Noida, Uttar Pradesh</span></p>
-       
           <p>
+        
            <a href = "mailto: info@shukglobal.com" className='text-white'><AiOutlineMail /> info@shukglobal.com</a> 
           </p>
         
-          <p><AiOutlinePhone />  + 01 234 567 88</p>
+          <p> <AiOutlinePhone />  + 01 234 567 88</p>
           <p><AiOutlinePhone /> + 01 234 567 89</p>
         </div>
    
@@ -152,19 +154,7 @@ const Footer = () => {
     <a className="text-reset fw-bold" href="https://www.shukglobal.com/">Shuk Global</a>
   </div>
 
-  {/* <div style={{ height: '100vh', width: '100%' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <Map
-          lat={59.955413}
-          lng={30.337844}
-          text="My Marker"
-        />
-      </GoogleMapReact>
-    </div> */}
+ 
  
 </footer>
 

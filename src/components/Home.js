@@ -18,7 +18,6 @@ import ScrollTrigger from 'react-scroll-trigger';
 import {MdOutlineSecurity} from 'react-icons/md'
 import {AiOutlineCloudServer,AiOutlineFileProtect} from 'react-icons/ai'
 import {GiCyberEye} from 'react-icons/gi'
-import {HiIdentification} from 'react-icons/hi'
 import {GrOrganization,GrTechnology} from 'react-icons/gr'
 import {MdOutlineWebStories} from 'react-icons/md'
 import { NavLink } from 'react-router-dom';

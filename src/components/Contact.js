@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink ,Link} from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {FaLocationDot} from 'react-icons/fa6'
 import {AiOutlineMail,AiTwotonePhone} from 'react-icons/ai'
@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GoogleMapReact from 'google-map-react';
+// import Map from './Locationmap'
 import Map from './Map'
 
 
@@ -20,7 +21,7 @@ const Contact = () => {
     zoom: 11
   };
 
-  const notify = () => toast.success("form submitted successfully !");
+  
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -29,6 +30,7 @@ const Contact = () => {
     emailjs.sendForm('service_xvsz2wf', 'template_m2ez4h9', form.current, 't3YaPgakXEoSbOyuw')
       .then((result) => {
           console.log(result.text);
+          toast.success("form submitted successfully !");
           console.log("message sent")
       }, (error) => {
           console.log(error.text);
@@ -50,30 +52,30 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail} >
   <div className="row mb-4">
     <div className="col-lg-6 col-md-6 col-12 ">
-      <input type="text"  className="form-control" placeholder=" Name" name="user_name"/>
+      <input type="text"  className="form-control" placeholder=" Name" name="user_name" required/>
     </div>
     <div className="col-lg-6 col-md-6 col-12">
-      <input type="email" className="form-control mt-2 mt-md-0" placeholder="Email" name="user_email"/>
+      <input type="email" className="form-control mt-2 mt-md-0" placeholder="Email" name="user_email" required/>
     </div>
   </div>
   <div className="row mb-4">
     <div className="col-lg-6 col-md-6 col-12 ">
-      <input type="number" className="form-control" placeholder="Number" name='user_number' />
+      <input type="number" className="form-control" placeholder="Number" name='user_number' required/>
     </div>
     <div className="col-lg-6 col-md-6 col-12">
       <input type="text" className="form-control mt-2 mt-md-0" placeholder="Services" name='user_services'/>
     </div>
   </div>
   <div className="form-group mb-4">
-    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder='Message' name="message" rows="5"></textarea>
+    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder='Message' name="message" rows="5" required></textarea>
   </div>
-  <button type='submit' value='send' className='btn btn-danger' onClick={notify}>Submit</button>
+  <button type='submit' value='send' className='btn btn-danger' >Submit</button>
 </form>
       </div>
       <div className='col-lg-5 col-md-5 col-12 ' >
        <h3 className='mb-3'>Our Contact Details</h3>
        <div className=''>
-      <FaLocationDot className='contact-address-icon'/>
+    <FaLocationDot className='contact-address-icon'/>
       <div className='contact-address'>
       <h5>Address : </h5>
       <p>206 , Tower B, ITHUM TOWER, GALAXY BUSINESS PARK, Block A, 
@@ -86,7 +88,7 @@ const Contact = () => {
       <AiOutlineMail className='contact-address-icon'/>
       <div className='contact-address'>
       <h5>Email : </h5>
-      <p>info@shukglobal.com</p>
+      <p> <a href = "mailto: info@shukglobal.com">info@shukglobal.com</a></p>
       </div>
       
       <p></p>
@@ -109,13 +111,13 @@ const Contact = () => {
    <ToastContainer />
    <div style={{ height: '450px', width: '100%' }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
+        bootstrapURLKeys={{ key:"" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
         <Map
-          lat={59.955413}
-          lng={30.337844}
+          lat={28.6263744}
+          lng={77.3726477}
           text="My Marker"
         />
       </GoogleMapReact>

@@ -7,6 +7,9 @@
 .navbrand{
   padding: 0px!important;
 }
+.navbar a{
+  margin: 0px 15px;
+}
 .navbar .active{
   color: red!important;
   border-bottom: 2px solid red;
@@ -42,6 +45,26 @@
 } */
 .button{
   background-color: #e21f36!important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+
+.button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #082862;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%);
+  transition: all 0.3s linear;
+}
+.button:hover::before{
+  transform: translate(0);
+  z-index: -1;
 }
 
 @media screen and (max-width:767px) {
@@ -128,9 +151,31 @@ font-size: 1.25rem!important;
   font-size:16px;
   color: #fff!important;
   padding: 10px 20px!important;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s linear;
+  overflow: hidden;
 }
+
+.btn-danger::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #082862;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%);
+  transition: all 0.3s linear;
+}
+.btn-danger:hover::before{
+  transform: translate(0);
+  z-index: -1;
+}
+
 .about-left img{
   max-width: 100%;
+  
 }
 @media screen and (max-width:992px) {
   .about-left img{
@@ -202,10 +247,16 @@ font-size: 1.25rem!important;
 }
 .card-top{
   border: 0px!important;
-
+  overflow: hidden;
 }
 .card-top img{
   height: 250px!important;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease
+}
+.card-top img:hover{
+  transform: scale(1.1);
 }
 .card-title{
   font-size: 19px!important;
@@ -302,9 +353,17 @@ font-size: 1.25rem!important;
  .footer p a{
   text-decoration: none!important;
  }
- .footer-section p{
-  margin-bottom: 5px!important;
+
+ .text-reset{
+  display: inline-block;
+  transition: all .3s ease-out!important;
  }
+
+ .text-reset:hover{
+  transform: translate(7px)!important;
+ }
+
+
   .fb{
  background-color: #4267B2!important;
  border-radius: 50%;
