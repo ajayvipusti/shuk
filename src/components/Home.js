@@ -33,7 +33,7 @@ const Home = () => {
      <div className='row pt-4 pb-3'>
        <div className='col-lg-7 col-md-7 col-12 content-part'>
          <h5>Shuk Global Pvt Ltd</h5>
-         <h1 className=''>Best In Class Cyber Security Services</h1>
+         <h1 className='head'>Best In Class Cyber Security Services</h1>
          <p>With our innovative cyber security solutions, your IT/OT network would be protected. In case of any incident, our response would be
           the first and effective to protect your systems.</p>
           <NavLink to='/contact'  className='btn btn-danger'>Contact Us</NavLink>
@@ -72,9 +72,9 @@ const Home = () => {
        <h2>Cybersecurity By Us</h2>
        <div className='row my-5 '>
            <div className='col-lg-3 col-md-3 col-12 my-2'>
-           <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+           <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
     <div className='card-icon'>
            <MdOutlineWebStories className='icons'/>
      </div>
@@ -82,7 +82,7 @@ const Home = () => {
         <Card.Title className='card-title'>Identifying Threats </Card.Title>
       </Card.Body>      
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
      
 
       <p>Vigilance is the sentinel of security – identifying threats before they cast their shadow</p>
@@ -93,9 +93,9 @@ const Home = () => {
         
          
            <div className='col-lg-3 col-md-3 col-12 my-2'>
-           <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+           <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
     <div className='card-icon'>
            <MdOutlineSecurity className='icons'/>
      </div>
@@ -103,7 +103,7 @@ const Home = () => {
         <Card.Title className='card-title'> Cyber Risk Assessment </Card.Title>
       </Card.Body>      
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
     
       <p>Cyber risk management: safeguarding today's virtual 
       frontiers to secure tomorrow's digital possibilities</p>
@@ -112,9 +112,9 @@ const Home = () => {
            </div>
            </div>
            <div className='col-lg-3 col-md-3 col-12 my-2'>
-           <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+           <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
     <div className='card-icon'>
            <GiCyberEye className='icons'/>
      </div>
@@ -122,7 +122,7 @@ const Home = () => {
         <Card.Title className='card-title'>Cyber Security Consulting </Card.Title>
       </Card.Body>      
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
 
       <p>Cybersecurity is not just about controlling data; it's
        about safeguarding the future of digital trust</p>
@@ -131,9 +131,9 @@ const Home = () => {
            </div>
            </div>
            <div className='col-lg-3 col-md-3 col-12 my-2'>
-           <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+           <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
     <div className='card-icon'>
            <AiOutlineCloudServer className='icons'/>
      </div>
@@ -141,7 +141,7 @@ const Home = () => {
         <Card.Title className='card-title'>Managing Cloud Security </Card.Title>
       </Card.Body>      
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
 
       <p>Securing the cloud: where innovation meets vigilance</p>
     </div>
@@ -237,6 +237,7 @@ const Home = () => {
      </div>
      </div>
     </section>
+
     <section className='why-chooseus'>
     <div className='container'>
       <div className='row py-5 text-center text-white'>
@@ -255,21 +256,21 @@ const Home = () => {
 			<p style={{fontSize:'20px'}}>Happy Customers</p>
 		</div>
 	</div>
-	<div className=" col-lg-3 col-md-3 col-12">
+	<div className=" col-lg-3 col-md-3 col-12 mt-3 mt-md-0">
 		<div className="counter-box">
     <GrOrganization className='counter-icon'/>
     {counterOn && <CountUp start={0} end={1000} delay={0.9} className='counter'/> }
 			<p style={{fontSize:'20px'}}>Trusted Organizations</p>
 		</div>
 	</div>
-	<div className=" col-lg-3 col-md-3 col-12">
-		<div className="counter-box">
+	<div className=" col-lg-3 col-md-3 col-12 mt-3 mt-md-0">
+		<div className="counter-box ">
     <AiOutlineFileProtect className='counter-icon'/>
     {counterOn && <CountUp start={0} end={567} delay={0.9} className='counter'/> }
 			<p style={{fontSize:'20px'}}>Website Protection</p>
 		</div>
 	</div>
-	<div className=" col-lg-3  col-md-3 col-12">
+	<div className=" col-lg-3  col-md-3 col-12 mt-3 mt-md-0">
 		<div className="counter-box">
     <GrTechnology className='counter-icon'/>
     {counterOn && <CountUp start={0} end={100} delay={0.9} className='counter'/> }

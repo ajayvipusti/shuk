@@ -5,17 +5,22 @@ import {FaLocationDot} from 'react-icons/fa6'
 import {AiOutlineMail,AiTwotonePhone} from 'react-icons/ai'
 import  { useRef } from 'react';
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
 
+  const notify = () => toast.success("form submitted successfully !");
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_iiynd8f', 'template_48oml2g', form.current, '48btyDIvZy3eDyRyN')
+    emailjs.sendForm('service_xvsz2wf', 'template_m2ez4h9', form.current, 't3YaPgakXEoSbOyuw')
       .then((result) => {
           console.log(result.text);
+          console.log("message sent")
       }, (error) => {
           console.log(error.text);
       });
@@ -33,27 +38,27 @@ const Contact = () => {
     <div className='row p-4' style={{ boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
       <div className='col-lg-7 col-md-7 col-12 p-4' >
       <h2 className='mb-2'>Write Us</h2>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail} >
   <div className="row mb-4">
-    <div className="col">
-      <input type="text"  className="form-control" placeholder=" Name" name="from_name"/>
+    <div className="col-lg-6 col-md-6 col-12 ">
+      <input type="text"  className="form-control" placeholder=" Name" name="user_name"/>
     </div>
-    <div className="col">
-      <input type="email" className="form-control" placeholder="Email" name="from_email"/>
+    <div className="col-lg-6 col-md-6 col-12">
+      <input type="email" className="form-control mt-2 mt-md-0" placeholder="Email" name="user_email"/>
     </div>
   </div>
   <div className="row mb-4">
-    <div className="col">
-      <input type="number" className="form-control" placeholder="Number" name='from_number' />
+    <div className="col-lg-6 col-md-6 col-12 ">
+      <input type="number" className="form-control" placeholder="Number" name='user_number' />
     </div>
-    <div className="col">
-      <input type="text" className="form-control" placeholder="Services" name='message'/>
+    <div className="col-lg-6 col-md-6 col-12">
+      <input type="text" className="form-control mt-2 mt-md-0" placeholder="Services" name='user_services'/>
     </div>
   </div>
-  <div class="form-group mb-4">
-    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Message' rows="5"></textarea>
+  <div className="form-group mb-4">
+    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder='Message' name="message" rows="5"></textarea>
   </div>
-  <button className='btn btn-danger'>Submit</button>
+  <button type='submit' value='send' className='btn btn-danger' onClick={notify}>Submit</button>
 </form>
       </div>
       <div className='col-lg-5 col-md-5 col-12 ' >
@@ -92,6 +97,7 @@ const Contact = () => {
    <section>
    
    </section>
+   <ToastContainer />
   </>
   )
 }
