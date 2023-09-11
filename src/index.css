@@ -577,8 +577,12 @@ service page css */
 }
 
 .map-img {
-  width: 30px !important;
-
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .img-map {
+    width: 100% !important;
+  }
 }

@@ -210,7 +210,8 @@ const Footer = () => {
             <img
               src={whatsapp}
               alt=""
-              style={{ height: "60px", width: "60px" }}
+              style={{ height: "60px", width: "50px" }}
+              className="img-fluid"
             />
           </a>
         </div>
