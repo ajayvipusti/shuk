@@ -11,7 +11,13 @@ import card6 from '../assets/s6.jpg'
 import card7 from '../assets/s7.jpg'
 import card8 from '../assets/s8.jpg'
 import card9 from '../assets/s9.jpg'
+import logo1 from '../assets/logo1.png'
+import logo2 from '../assets/logo2.png'
+import logo3 from '../assets/logo3.png'
+import logo4 from '../assets/logo4.png'
+import logo5 from '../assets/nascom-logo.jpg'
 import img3 from '../assets/2.png'
+import solutionimg from '../assets/solution-img.png'
 import {GrShieldSecurity} from 'react-icons/gr'
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
@@ -29,10 +35,20 @@ const Home = () => {
     <>
     <section className='home-container mx-2'>
     <div className='container'>
-     <div className='row pt-4 pb-3'>
+     <div className='row  pb-3'>
        <div className='col-lg-7 col-md-7 col-12 content-part'>
-         <h5>Shuk Global Pvt Ltd</h5>
+         {/* <h5>Shuk Global Pvt Ltd</h5> */}
+         <h5>Incubated at IIT Kanpur</h5>
+         <div className='logo-pictures mt-3'>
+          <img src={logo1} alt='' />
+          <img src={logo3} alt='' />
+          <img src={logo4} alt='' />
+          <img src={logo5} alt='' />
+
+         </div>
+          <h5 className='mt-3'>Shuk Global Pvt Ltd</h5>
          <h1 className='head'>Best In Class Cyber Security Services</h1>
+         
          <p>With our innovative cyber security solutions, your IT/OT network would be protected. In case of any incident, our response would be
           the first and effective to protect your systems.</p>
           <NavLink to='/contact'  className='btn btn-danger'>Contact Us</NavLink>
@@ -297,11 +313,12 @@ const Home = () => {
 
     <section>
     <div className='container my-5'>
-    <div className='row'>
-    <div className='col-lg-6 col-md-6 col-12'>
+    <div className='row text-center'>
     <h5>All-in Solution</h5>
-    <h3 className='my-4 fs-4'>Our experts are providing and planning 24/7 technical
+    <h3 className='mb-5 fs-4' style={{Width:'50%'}}>Our experts are providing and planning 24/7 technical
      support services with product and security consultation.</h3>
+    <div className='col-lg-6 col-md-6 col-12'>
+   
      <div className="card w-100 card-solution">
   <div className="card-body card-solution-body">
     <h5 className="card-title-solution">High-Quality Service</h5>
@@ -324,7 +341,7 @@ const Home = () => {
 </div>
     </div>
     <div className='col-lg-6 col-md-6 col-12 solution-img'>
-     {/* <img src={img3} alt='' className='img-fluid'/> */}
+     <img src={solutionimg} alt='' className='img-fluid'/>
     </div>
     </div>
     </div>

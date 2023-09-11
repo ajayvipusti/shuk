@@ -5,7 +5,7 @@ import {ImLocation} from 'react-icons/im'
 import { NavLink } from 'react-router-dom'
 // import GoogleMapReact from 'google-map-react';
 // import Map from './Map'
-
+import whatsapp from '../assets/whatsapp-img.png'
 
 const Footer = () => {
 
@@ -31,8 +31,9 @@ const Footer = () => {
       <span>Get connected with us on social networks:</span>
     </div>
   
+  
     <div className='social-media '>
-      <a href="" className="me-4 text-reset fb">
+      <a  rel="noopener noreferrer" className="me-4 text-reset fb">
         <BiLogoFacebook className='facbook_icon'/>
       </a>
       <a href="" className="me-4 text-reset twitter">
@@ -42,7 +43,7 @@ const Footer = () => {
       <a href="" className="me-4 text-reset instagram">
         <BiLogoInstagram />
       </a>
-      <a href="" className="me-4 text-reset linkdin">
+      <a href="https://in.linkedin.com/company/shukglobal" target="_blank" className="me-4 text-reset linkdin">
         <BiLogoLinkedin />
       </a>
      
@@ -138,14 +139,17 @@ const Footer = () => {
            <a href = "mailto: info@shukglobal.com" className='text-white'><AiOutlineMail /> info@shukglobal.com</a> 
           </p>
         
-          <p> <AiOutlinePhone />  + 01 234 567 88</p>
-          <p><AiOutlinePhone /> + 01 234 567 89</p>
+          <p> <AiOutlinePhone />+91 9659653900</p>
+          {/* <p><AiOutlinePhone /> + 01 234 567 89</p> */}
         </div>
    
       </div>
    
     </div>
   </section>
+  <div style={{height:'60px', width:'60px', position:'fixed', right:'10px',bottom:'20px'}}>
+   <a href='https://wa.me/919659653900'> <img src={whatsapp} alt='' style={{height:'60px', width:'60px'}}/></a>
+  </div>
 
   <div className="p-4 px-5" 
   style={{backgroundColor:'#061430'}}
@@ -157,6 +161,7 @@ const Footer = () => {
  
  
 </footer>
+
 
      </>
   )
