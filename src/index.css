@@ -585,4 +585,7 @@ service page css */
   .img-map {
     width: 100% !important;
   }
+  .img-sol {
+    height: 280px !important;
+  }
 }
